@@ -6,6 +6,7 @@ import AddUserForm from "./components/AddUserForm";
 import UserCard from "./components/UserCard";
 import EditUserModal from "./components/EditUserModal";
 import SearchAndFilter from "./components/SearchAndFilter";
+import defaultUsers from "./data/user.json"; // <-- import default data
 
 export default function App() {
   const dispatch = useDispatch();
@@ -15,7 +16,13 @@ export default function App() {
   const [searchFilterData, setSearchFilterData] = useState(null);
 
   useEffect(() => {
-    dispatch(setUsers(storedUsers));
+    // Load from localStorage if available, else from default JSON
+    if (storedUsers.length === 0) {
+      dispatch(setUsers(defaultUsers));
+      setStoredUsers(defaultUsers);
+    } else {
+      dispatch(setUsers(storedUsers));
+    }
   }, []);
 
   useEffect(() => {
@@ -59,15 +66,9 @@ export default function App() {
       <h1 className="text-3xl font-bold text-center mb-6 text-blue-700">Advanced Profile Manager</h1>
 
       <div className="max-w-4xl mx-auto space-y-6">
-        {/* Add User */}
         <AddUserForm />
-
-        {/* Search and Filter */}
         <SearchAndFilter users={users} onSearchAndFilter={handleSearchAndFilter} />
-
-        {/* User List */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {/* Check if users is defined and is an array before calling filter */}
           {Array.isArray(users) &&
             users.filter(filterProfiles).map((user) => (
               <UserCard
@@ -79,7 +80,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* Edit Modal */}
       {editingUser && (
         <EditUserModal
           user={editingUser}

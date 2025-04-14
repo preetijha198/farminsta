@@ -1,0 +1,25 @@
+[
+    {
+      "name": "Preeti Jha",
+      "email": "preeti@example.com",
+      "description": "Frontend Developer skilled in React and Tailwind CSS.",
+      "languages": "JavaScript, HTML, CSS",
+      "education": "B.Tech",
+      "specialization": "Frontend Development",
+      "twitter": "https://twitter.com/preetijha",
+      "instagram": "https://instagram.com/preetijha",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D5603AQEJX-OeezU7yQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1715312491460?e=1750291200&v=beta&t=CYDXmK8HqhLDv6RpaunOPvuUDjztp5hYisvCyXAUy1k"
+    },
+    {
+      "name": "Bikash Kumar Jha",
+      "email": "bikash@example.com",
+      "description": "CA with Tax Specialization.",
+      "languages": "English, Nepali, Hindi, Maithali",
+      "education": "CA",
+      "specialization": "Direct Tax And International Tax",
+      "twitter": "https://twitter.com/rahulsharma",
+      "instagram": "https://instagram.com/rahulsharma",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4D03AQHAMWOFeRPH2A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1699771907572?e=1750291200&v=beta&t=r6U6RdD6BL1bseZYNxf8JvJ-uJDz58Egpoy8_eOu-dk"
+    }
+  ]
+  
